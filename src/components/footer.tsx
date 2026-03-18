@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Facebook, Twitter, Youtube, Instagram, Linkedin } from "lucide-react";
 
 export default function Footer() {
@@ -6,19 +7,20 @@ export default function Footer() {
     <footer className="relative bg-black text-white">
       {/* Navigation Links */}
       <div className="container mx-auto px-4 py-6">
+
         <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-12">
-          <a href="#books" className="hover:text-gray-300 transition-colors">
-            Books
-          </a>
-          <a href="#heroes" className="hover:text-gray-300 transition-colors">
-            Heroes
-          </a>
-          <a href="#contact" className="hover:text-gray-300 transition-colors">
-            Contact
-          </a>
-          <a href="#email" className="hover:text-gray-300 transition-colors">
-            Email
-          </a>
+          <Link href="/terms-and-conditions" className="hover:text-gray-300 transition-colors">
+            Terms and Conditions
+          </Link>
+          <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">
+            Privacy Policy
+          </Link>
+          <Link href="/refund-policy" className="hover:text-gray-300 transition-colors">
+            Refund Policy
+          </Link>
+          <Link href="/contact-us" className="hover:text-gray-300 transition-colors">
+            Contact Us
+          </Link>
         </div>
       </div>
 

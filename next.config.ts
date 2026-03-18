@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "i.pinimg.com" },        // Pinterest (your URL)
       { protocol: "https", hostname: "images.unsplash.com" }, // optional, for future
       { protocol: "https", hostname: "ryzfriykqluohxvulezu.supabase.co" },
+      { protocol: "https", hostname: "gfkoahjtzykilyvxzzto.supabase.co" },
     ],
   },
 };

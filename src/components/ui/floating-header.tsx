@@ -23,7 +23,7 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
   const links = [
     { label: "View", href: "/view" },
     { label: "Heroes", href: "/books" },
-    // { label: "Heroes", href: "/heroes" },
+    { label: "About Us", href: "/about-us" },
   ];
 
   const linkBase =
@@ -40,7 +40,10 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
 
   const activeBg = onLight ? "bg-gray-100" : "bg-white/15";
 
-  const logoSrc = pathname === "/view" ? IMAGES.colourWhiteOfBeyondHeights : IMAGES.logoWhiteOfBeyondHeights;
+  let logoSrc = "https://gfkoahjtzykilyvxzzto.supabase.co/storage/v1/object/public/Assets/beyond%20heights/Beyond%20Heights%20Logo-01.svg";
+  if (["/view", "/about-us", "/refund-policy", "/privacy-policy", "/terms-and-conditions", "/contact-us"].includes(pathname)) {
+    logoSrc = "https://gfkoahjtzykilyvxzzto.supabase.co/storage/v1/object/public/Assets/beyond%20heights/Beyond%20Heights%20Logo-02.svg";
+  }
 
   return (
     <header
@@ -80,7 +83,9 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
 
         {/* Right Section */}
         <div className="flex items-center gap-2">
-          <Button size="sm" variant="secondary">Contact Us</Button>
+          <Link href="/contact-us">
+            <Button size="sm" variant="secondary">Contact Us</Button>
+          </Link>
 
           {/* Mobile Menu */}
           <Sheet>
