@@ -83,10 +83,8 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
 
         {/* Right Section */}
         <div className="flex items-center gap-2">
-          <a
-            href="https://marathon.beyond-heights.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/donate"
             className={cn(
               "group relative inline-flex items-center gap-2 rounded-full px-5 py-2 text-xs font-bold uppercase tracking-[0.15em]",
               "bg-gradient-to-r from-[#8B0000] via-[#DC2626] to-[#FF4040]",
@@ -97,9 +95,9 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
               "before:absolute before:inset-0 before:rounded-full before:bg-[linear-gradient(120deg,transparent_30%,rgba(255,255,255,0.15)_50%,transparent_70%)] before:bg-[length:200%_100%] before:bg-[position:100%] hover:before:bg-[position:-100%] before:transition-all before:duration-700"
             )}
           >
-            Marathon
+            Donate
             <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
+          </Link>
 
           {/* Mobile Menu */}
           <Sheet>
@@ -136,10 +134,8 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
                   );
                 })}
                 <SheetClose asChild>
-                  <a
-                    href="https://marathon.beyond-heights.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href="/donate"
                     className={cn(
                       "group relative mt-6 flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-bold uppercase tracking-[0.15em]",
                       "bg-gradient-to-r from-[#8B0000] via-[#DC2626] to-[#FF4040]",
@@ -149,9 +145,9 @@ export function FloatingHeader({ theme = "dark", className }: HeaderProps) {
                       "before:absolute before:inset-0 before:rounded-full before:bg-[linear-gradient(120deg,transparent_30%,rgba(255,255,255,0.15)_50%,transparent_70%)] before:bg-[length:200%_100%] before:bg-[position:100%] hover:before:bg-[position:-100%] before:transition-all before:duration-700"
                     )}
                   >
-                    Marathon
+                    Donate
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
+                  </Link>
                 </SheetClose>
               </nav>
             </SheetContent>
